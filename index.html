@@ -33,7 +33,7 @@ d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitani
 
   // Add X axis
   var x = d3.scaleLinear()
-    .domain([0, 70])
+    .domain([0, 99])
     .range([ 0, width ]);
   svg.append("g")
     .attr("transform", "translate(0," + height + ")")
@@ -41,7 +41,7 @@ d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitani
 
   // Add Y axis
   var y = d3.scaleLinear()
-    .domain([0, 1])
+    .domain([0, 1.5])
     .range([ height, 0]);
   svg.append("g")
     .call(d3.axisLeft(y));
@@ -54,7 +54,7 @@ d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitani
     .append("circle")
       .attr("cx", function (d) { return x(d.age); } )
       .attr("cy", function (d) { return y(d.survived); } )
-      .attr("r", 1.5)
+      .attr("r", 2)
       .style("fill", "#69b3a2")
 
 })
