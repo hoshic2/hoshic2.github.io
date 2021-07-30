@@ -52,8 +52,8 @@ d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitani
     .data(data)
     .enter()
     .append("circle")
-      .attr("cx", function (d) { return x(d.survived); } )
-      .attr("cy", function (d) { return y(d.age); } )
+      .attr("cx", function (d) { return x(d.age); } )
+      .attr("cy", function (d) { return y(d.survived); } )
       .attr("r", 1.5)
       .style("fill", "#69b3a2")
 
