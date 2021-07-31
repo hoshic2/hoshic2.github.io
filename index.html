@@ -16,8 +16,10 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Add 2 buttons -->
-<button onclick="update(data1)">Total Survived?</button>
+<button onclick="update(data1)">Total Survived</button>
 <button onclick="update(data2)">1st Class Survival</button>
+<button onclick="update(data3)">2nd Class Survival</button>
+<button onclick="update(data4)">3rd Class Survival</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -27,15 +29,28 @@
 //Read the data
 //d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitanic.csv", function(data) {
 
-// create 2 data_set
+// total survival
 var data1 = [
    {group: "Survived", value: 427},
    {group: "Died", value: 619}
 ];
 
+// 1st class survival
 var data2 = [
    {group: "Survived", value: 181},
    {group: "Died", value: 103}
+];
+
+// 2nd class survival
+var data3 = [
+   {group: "Survived", value: 115},
+   {group: "Died", value: 146}
+];
+
+// 3rd class survival
+var data4 = [
+   {group: "Survived", value: 131},
+   {group: "Died", value: 370}
 ];
 
 // set the dimensions and margins of the graph
