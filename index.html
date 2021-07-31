@@ -16,8 +16,8 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Add 2 buttons -->
-<button onclick="update(data1)">Survived?</button>
-<button onclick="update(data2)">Class</button>
+<button onclick="update(data1)">Total Survived?</button>
+<button onclick="update(data2)">1st Class Survival</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -30,13 +30,12 @@
 // create 2 data_set
 var data1 = [
    {group: "Survived", value: 427},
-   {group: "Died", value: 619},
+   {group: "Died", value: 619}
 ];
 
 var data2 = [
-   {group: "1st", value: 284},
-   {group: "2nd", value: 261},
-   {group: "3rd", value: 501}
+   {group: "Survived", value: 181},
+   {group: "Died", value: 103}
 ];
 
 // set the dimensions and margins of the graph
@@ -89,8 +88,7 @@ function update(data) {
       .attr("height", function(d) { return height - y(d.value); })
       .attr("fill", "#69b3a2")
 
-  u
-      .remove()
+  u.exit().remove()
 
 }
 
