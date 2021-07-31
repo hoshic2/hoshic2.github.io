@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <h1>
-  Titanic dataset
+  Titanic Dataset Survival
 </h1>
 
 <p>
@@ -18,9 +18,11 @@
 
 <!-- Add 2 buttons -->
 <button onclick="update(data1)">Total Survived</button>
-<button onclick="update(data2)">1st Class Survival</button>
-<button onclick="update(data3)">2nd Class Survival</button>
-<button onclick="update(data4)">3rd Class Survival</button>
+<button onclick="update(data2)">1st Class</button>
+<button onclick="update(data3)">2nd Class</button>
+<button onclick="update(data4)">3rd Class</button> <br>
+<button onclick="update(data4)">Male</button>
+<button onclick="update(data4)">Female</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
@@ -52,6 +54,18 @@ var data3 = [
 var data4 = [
    {group: "Survived", value: 131},
    {group: "Died", value: 370}
+];
+
+// male survial
+var data5 = [
+   {group: "Survived", value: 135},
+   {group: "Died", value: 523}
+];
+
+// male survial
+var data46= [
+   {group: "Survived", value: 292},
+   {group: "Died", value: 96}
 ];
 
 // set the dimensions and margins of the graph
