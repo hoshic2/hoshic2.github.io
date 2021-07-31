@@ -16,7 +16,7 @@
 <script src="https://d3js.org/d3.v4.js"></script>
 
 <!-- Add 2 buttons -->
-<button onclick="update(data1)">Variable 1</button>
+<button onclick="update(data1)">Survived?</button>
 <button onclick="update(data2)">Variable 2</button>
 
 <!-- Create a div where the graph will take place -->
@@ -29,9 +29,8 @@
 
 // create 2 data_set
 var data1 = [
-   {group: "A", value: 427},
-   {group: "B", value: 619},
-   {group: "C", value: 8}
+   {group: "Survived", value: 427},
+   {group: "Died", value: 619},
 ];
 
 var data2 = [
@@ -65,7 +64,7 @@ svg.append("g")
 
 // Add Y axis
 var y = d3.scaleLinear()
-  .domain([0, 1100])
+  .domain([0, 700])
   .range([ height, 0]);
 svg.append("g")
   .attr("class", "myYaxis")
