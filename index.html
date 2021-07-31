@@ -72,14 +72,6 @@ var yAxis = svg.append("g")
 // A function that create / update the plot for a given variable:
 function update(data) {
 
-  // Update the X axis
-  x.domain(data.map(function(d) { return d.group; }))
-  xAxis.call(d3.axisBottom(x))
-
-  // Update the Y axis
-  y.domain([0, d3.max(data, function(d) { return d.value }) ]);
-  yAxis.transition().duration(1000).call(d3.axisLeft(y));
-
   // Create the u variable
   var u = svg.selectAll("rect")
     .data(data)
