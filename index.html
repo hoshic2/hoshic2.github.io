@@ -53,8 +53,6 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-
-
 // A function that create / update the plot for a given variable:
 function update(data) {
 
@@ -89,6 +87,10 @@ function update(data) {
       .attr("width", x.bandwidth())
       .attr("height", function(d) { return height - y(d.value); })
       .attr("fill", "#69b3a2")
+
+  u
+        .exit()
+        .remove()
 }
 
 // Initialize the plot with the first dataset
