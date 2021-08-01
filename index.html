@@ -144,8 +144,8 @@ d3.select("#mySlider").on("change", function(d){
   d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitanic.csv", function(data) {
 
   let mapped = [
-     {group: "Survived", value: d3.sum(data.survived == survived)},
-     {group: "Died", value: d3.sum(data.survived == died)}
+     {group: "Survived", value: 10},
+     {group: "Died", value: 20}
   ];
   update(mapped)
   })
