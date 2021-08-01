@@ -147,7 +147,7 @@ d3.select("#mySlider").on("change", function(d){
      {group: "Survived", value: sum(data.survived == survived)},
      {group: "Died", value: sum(data.survived == died)}
   ]
-
+  update(mapped)
   })
 })
 
