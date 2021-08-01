@@ -138,13 +138,11 @@ function update(data) {
 
 }
 
-
-
 // Listen to the slider?
 d3.select("#mySlider").on("change", function(d){
   selectedValue = this.value
   let mapped = [
-     {group: "Survived", value: age."0"},
+     {group: "Survived", value: selectedValue},
      {group: "Died", value: selectedValue}
    ]
   update(mapped)
