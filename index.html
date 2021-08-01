@@ -141,14 +141,11 @@ function update(data) {
 // Listen to the slider?
 d3.select("#mySlider").on("change", function(d){
   selectedValue = this.value
-  d3.csv("https://raw.githubusercontent.com/hoshic2/hoshic2.github.io/main/ptitanic.csv", function(data) {
-
   let mapped = [
-     {group: "Survived", value: 10},
-     {group: "Died", value: 20}
-  ];
+     {group: "Survived", value: this.value},
+     {group: "Died", value: this.value}
   update(mapped)
-  })
+
 })
 
 update(data1)
