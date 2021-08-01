@@ -17,20 +17,31 @@
 <!-- Load d3.js -->
 <script src="https://d3js.org/d3.v4.js"></script>
 
-<h5>(Default) Total</h5>
+<h3>(Default) Total</h3>
 <button onclick="update(data1)">Total Survived</button> <br>
 
-<h5> Class </h5> <br>
+<h3>Class</h3>
+<p>
+  Try with different classes to see the ratio of survival vs. died. <br>
+  Notice better classes have a higher surivival rate.
+</p>
 <button onclick="update(data2)">1st Class</button>
 <button onclick="update(data3)">2nd Class</button>
 <button onclick="update(data4)">3rd Class</button> <br>
 
-<h5> Sex </h5>
+<h3>Sex</h3>
 <button onclick="update(data5)">Male</button>
 <button onclick="update(data6)">Female</button>
 
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
+
+<h3>
+  Now try on your own! With other variables and age below!
+</h3>
+<h3>Age</h3>
+<input type="range" name="mySlider" id=mySlider min="0" max="90" value="1">
+
 
 <script>
 
