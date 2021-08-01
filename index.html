@@ -98,10 +98,6 @@ var svg = d3.select("#my_dataviz")
     .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
 
-var age = [
-    {"0": {{group: "survived", value: 500}, {group: "died", value: 500}}}
-];
-
 // A function that create / update the plot for a given variable:
 function update(data) {
 
@@ -141,6 +137,10 @@ function update(data) {
   u.exit().remove()
 
 }
+
+var age = [
+  {group: 0, value: {{group: "Survived", value: 500}, {group: "Died", value: 500}}}
+];
 
 // Listen to the slider?
 d3.select("#mySlider").on("change", function(d){
