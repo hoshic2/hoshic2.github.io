@@ -40,7 +40,7 @@
   Now try on your own! With other variables and age below!
 </h3>
 <h3>Age</h3>
-<input type="range" name="mySlider" id=mySlider min="0" max="90" value="1">
+<input type="range" name="mySlider" id=mySlider min="0" max="4" value="1">
 
 
 <script>
@@ -135,15 +135,25 @@ function update(data) {
       .attr("fill", "#0000C6")
 
   u.exit().remove()
-
 }
 
 // Listen to the slider?
 d3.select("#mySlider").on("change", function(d){
   selectedValue = this.value
+  sur = 0
+  die = 0
+  if (selectedValue == 0){
+    sur = 114
+    die = 134
+  }
+  else {
+    sur = 122
+    die = 348
+  }
+
   let mapped = [
-     {group: "Survived", value: selectedValue},
-     {group: "Died", value: selectedValue}
+     {group: "Survived", value: sur},
+     {group: "Died", value: die}
    ]
   update(mapped)
 })
