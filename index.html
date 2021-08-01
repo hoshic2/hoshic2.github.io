@@ -142,7 +142,7 @@ function update(data) {
 d3.select("#mySlider").on("change", function(d){
   selectedValue = this.value
   let mapped = [
-     {group: "Survived", value: selectedValue},
+     {group: "Survived", value: age.0},
      {group: "Died", value: selectedValue}
    ]
   update(mapped)
@@ -150,7 +150,11 @@ d3.select("#mySlider").on("change", function(d){
 
 update(data1)
 
-// Initialize the plot with the first dataset
+var age = [
+  {"0": {group: "survived", value: 500}, {group: "died", value: 500}}
+]
+
+
 
 
 </script>
